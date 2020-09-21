@@ -1,0 +1,65 @@
+body{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 590;
+    margin: 0%;
+    padding: 0%;
+  }
+  p{
+    font-size: 1.2vmax;
+  }
+  h1{
+    font-size: 6vmax;
+  }
+  .anim1:hover {
+    transform: scale(1.15);
+    animation-duration: 2s;
+    text-shadow: #1e1e1e;
+    animation-timing-function: ease-in-out;
+  }
+  .anim3{
+    animation: text-fade 6s;
+    animation-delay: 5ms;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes text-fade {
+    0%{opacity: 100%;}
+    50%{opacity: 0%;}
+    100%{opacity: 100%;}
+  }
+
+  .anim3r{
+    animation: 6s text-fade-r;
+    animation-iteration-count: infinite;
+    animation-delay: 5ms;
+  }
+
+  @keyframes text-fade-r {
+    0%{opacity: 0%;}
+    50%{opacity: 100%}
+    100%{opacity: 0%;}
+  }
+
+  .anim2 {
+    animation-timing-function: ease-in-out;
+    animation: fadeIN;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fadeIN {
+      from {
+          opacity: 0%;
+      }
+
+      to {
+          opacity: 100%;
+      }
+  }
+
+
+  a:hover {
+    transform: scale(1.15);
+    animation-duration: 2s;
+    text-shadow: #1e1e1e;
+    animation-timing-function: ease-in-out;
+  }

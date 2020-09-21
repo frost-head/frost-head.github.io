@@ -1,0 +1,13 @@
+<section  >
+    <div class="row home1" style="position: relative;">
+    <div class="col-md-8">
+        <img src="/Assets/wolf.svg" style="position: absolute;" class= "">
+        <h1 class="text-center anim3 vcenter" style="position: absolute;">
+        Hey! I am Ayush
+        </h1>
+        <h1 class="text-center anim3r vcenter " style="position: absolute;">
+        AKA Frost Head
+        </h1>
+    </div>
+    </div>
+</section>
