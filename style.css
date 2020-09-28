@@ -7,16 +7,20 @@ body{
 p{
   font-size: 1.2vmax;
 }
-.introduction h1{
-  font-size: 6vmax;
+h1{
+  font-size: 5.5vmax;
 }
 
-.introduction h3{
-  font-size: 2vmax;
+h2{
+  font-size: 4vmax;
+}
+
+h3{
+  font-size: 2.5vmax;
 }
 
 
-.section-one{
+section{
   overflow-x: hidden;
   height: 100vh;
   width: 90%;
@@ -27,7 +31,7 @@ p{
   position: relative;
   width: 90%;
   margin: auto;
-  margin-top: 25vh;
+  margin-top: 30vmin;
 }
 
 .img{
@@ -37,71 +41,12 @@ p{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.anim1:hover {
+.animH:hover {
   transform: scale(1.15);
   animation-duration: 2s;
   text-shadow: #1e1e1e;
   animation-timing-function: ease-in-out;
 }
-
-.animI{
-  animation: Image-move 5s;
-
-}
-
-@keyframes Image-move {
-  0%{opacity: 0%; left: 5vw;}
-  50%{opacity: 100%; left: 0vw;}
-}
-
-.anim3{
-  animation: text-fade 4s;
-}
-
-@keyframes text-fade {
-  0%{opacity: 0%;}
-  100%{opacity: 100%;}
-}
-
-.anim3r{
-  animation: 4s text-fade-r;
-}
-
-@keyframes text-fade-r {
-  0%{opacity: 0%;}
-  50%{opacity: 75%}
-  100%{opacity: 100%;}
-}
-
-.anim2 {
-  animation-timing-function: ease-in-out;
-  animation: fadeIN;
-  animation-duration: 1.5s;
-}
-
-@keyframes fadeIN {
-    from {
-        opacity: 0%;
-    }
-
-    to {
-        opacity: 100%;
-    }
-}
-
 
 a:hover {
   transform: scale(1.15);
@@ -118,12 +63,11 @@ a:visited {
   color: #1e1e1e;
 }
 
-/* mouse over link */
-a:hover {
-  color:#1e1e1e;
-}
 
 /* selected link */
 a:active {
   color: #1e1e1e;
 }
+
+
+
