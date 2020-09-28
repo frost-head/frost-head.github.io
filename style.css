@@ -4,6 +4,8 @@ body{
   margin: 0%;
   padding: 0%;
 }
+
+
 p{
   font-size: 1.2vmax;
 }
@@ -49,9 +51,7 @@ section{
 }
 
 a:hover {
-  transform: scale(1.15);
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
+  color: #5e5e5e;
 }
 
 a:link {
