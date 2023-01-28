@@ -6,8 +6,7 @@
 
 // fetchAsync("AIzaSyBkr4hFsGWUZafhgbGr1bve7dMwedWJNBc")
 
-key = "AIzaSyBkr4hFsGWUZafhgbGr1bve7dMwedWJNBc"
-
+key = ""
 const https = require('https')
 const url = "https://youtube.googleapis.com/youtube/v3/channelId=UCJCwFQT3KK4-K_08kIcnhDg&key=" + key;
 https.get(url, res => {
