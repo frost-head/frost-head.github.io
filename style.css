@@ -1,157 +1,233 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Sofia+Sans:wght@300;500&display=swap');
 
-
-body{
-  font-family:'Abel', sans-serif; 
-  padding: 0%;
-  margin: 0%;
-  background-color: #000;
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+    width: 0px;
+    background-color: #000;
 }
 
-.body{
-  height: 97vh;
-  border-style: solid;
-  border-width: 10px;
-  border-color: #000;
-  border-radius: 20px;
-  border: outside;
-  background-color: #fff;
-  padding-left: 110px;
-  padding-right: 110px;
-  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+Body{
+    padding: 0;
+    margin: 0;
+    top: 0px;
+    background: #000;
+    color: #fff;
+    font-family: 'Sofia Sans', sans-serif;
+    overflow-x: hidden;
+    font-size: 1.37em;
+    line-height: 40px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    transition: 150ms;
+}
+a:hover{
+    color: #000;
+    background: #fff ;
+    padding: 10px;
+}
+
+nav h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 2.1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 10px;
+    margin-top: 15px;
+}
+
+nav .nav-links{
+    min-width: 50vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav .nav-links a{
+    color: #FFF;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    margin: 15px;
+    transition: 150ms;
+    padding: 10px;
 
 }
+
+nav .nav-links a:hover{
+    color: #000;
+    background-color: #FFF;
+}
+
+header{
+    position: sticky;
+    top: 0;
+}
+
 
 nav{
-  position:static;
-  top:0;
-  left:0;
-  width: auto;
-  margin-top: 20px;
-}
-
-.frostlogo{
-  font-size:36px;
-  color: #2176FF;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #31393c;
-  border-radius: 6px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 2.5px;
-  padding-bottom: 2.5px;
-  width: max-content;
-}
-
-.row{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80vh;
-  flex-wrap: nowrap;
-}
-
-.black{
-  font-size: 64px;
-  color: #31393c;
-}
-
-.blue{
-  color:#2176FF;
-  font-size:64px;  
-}
-
-.renovation{
-  width: 35%;
-
-}
-
-.links{
-  display: none;
-}
-
-@media screen and (max-width: 1240px) {
-  .black {
-    font-size: 50px;
-  }
-  .blue {
-    font-size: 50px;  
-  }
-  .renovation{
-    width: 35%;
-  }
-  .frostlogo{
-    font-size: 30px
-  }
-  .body{
-    padding-left: 85px;
-    padding-right: 85px;
-
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .black {
-    font-size: 44px;
-  }
-  .blue {
-    font-size: 44px;  
-  }
-  .renovation{
-    width: 35%;
-  }
-  .frostlogo{
-    font-size: 24px
-  }
-  .body{
-    padding-left: 70px;
-    padding-right: 70px;
-
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .black {
-    font-size: 30px;
-  }
-  .blue {
-    font-size: 30px;  
-  }
-  .renovation{
-    width: 35%;
-  }
-  .frostlogo{
-    font-size: 18px
-  }
-  .body{
-    padding-left: 45px;
-    padding-right: 45px;
-    border-width: 7.5px;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .black {
-    font-size: 36px;
-  }
-  .blue {
-    font-size: 36px;  
-  }
-  .renovation{
-    width: 75%;
-  }
-  .frostlogo{
-    font-size: 12px;
-    border-width: 0.5px;
-  }
-  .row{
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     justify-content: space-around;
-  }
-  .body{
-    padding-left: 20px;
-    padding-right: 20px;
-    border-width: 5px;
-  }
+    align-items: baseline;
+    background-color: #000;
+    background: rgba(0, 0, 0, 0.40);
+    backdrop-filter: blur(10px);
+
+}
+
+.hero-image{
+    margin-top: -60px;
+}
+
+.hero-image img{
+    width: 100vw;
+    object-fit:cover;
+}
+
+.Descp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.Descp img{
+    width: 50vw;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.know-more p{
+    padding: 0px 2rem;
+    max-height: 350px;
+    overflow: scroll;
+    text-align: justify;
+    max-width: 1050px;
+}
+
+.know-more h2{
+    font-size: 3.5rem;
+    margin: 10px;
+    font-family: 'Playfair Display', serif;
+
+}
+
+.know-more h4{
+    font-family: 'Playfair Display', serif;
+
+}
+
+.know-more{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    text-align: center;
+    margin: 40px;
+}
+
+.projects, .social-media{
+    min-height: 800px;
+
+}
+
+.social-media ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 400px;
+}
+
+.social-media .nav-links a{
+    color: #FFF;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    margin: 15px;
+    transition: 150ms;
+    padding: 10px;
+
+}
+
+.social-media .nav-links a:hover{
+    color: #000;
+    background-color: #FFF;
+}
+
+.know-more-button{
+    font-size: 2rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: 150ms;
+    font-family: 'Playfair Display', serif;
+
+}
+
+.know-more-button:hover{
+    color: #000;
+    background-color: #FFF;
+
+}
+
+
+/* 
+.projects{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+} */
+
+@media (min-width: 768px) {
+    /* Styles for tablets */
+    .know-more {
+        margin: 20px;
+
+        /* display: none; */
+    }
+
+    .know-more p{
+        max-height: 300px;
+
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Styles for desktop */
+    .know-more {
+
+        margin: 40px;
+    
+    }
+    .know-more p{
+        max-height: 480px;
+
+    }
 }
