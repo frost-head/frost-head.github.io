@@ -121,7 +121,7 @@ nav{
 
 .know-more p{
     padding: 0px 2rem;
-    max-height: 350px;
+    max-height: 480px;
     overflow: scroll;
     text-align: justify;
     max-width: 1050px;
@@ -131,6 +131,7 @@ nav{
     font-size: 3.5rem;
     margin: 10px;
     font-family: 'Playfair Display', serif;
+
 
 }
 
@@ -149,7 +150,7 @@ nav{
 }
 
 .projects, .social-media{
-    min-height: 800px;
+    min-height: 850px;
 
 }
 
@@ -195,6 +196,19 @@ nav{
 
 }
 
+section{
+    margin-bottom: 15px;
+}
+
+
+/* 
+.projects{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+} */
 
 @media (max-width: 1024px) {
     /* Styles for tablets */
