@@ -239,6 +239,12 @@ section{
 
 @media (max-width: 768px) {
 
+    Body{
+        font-size: 1.2em;
+        line-height: 30px;
+        font-weight: normal;
+    }
+
     
     /* Styles for tablets */
     .know-more {
@@ -249,9 +255,6 @@ section{
 
     .know-more p{
         max-height: 800px;
-        
-        font-size: 16px;
-        line-height: 16px;
 
     }
     .projects, .social-media{
