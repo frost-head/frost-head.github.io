@@ -238,6 +238,18 @@ section{
 
 
 @media (max-width: 768px) {
+    Body{
+    padding: 0;
+    margin: 0;
+    top: 0px;
+    background: #000;
+    color: #fff;
+    font-family: 'Sofia Sans', sans-serif;
+    overflow-x: hidden;
+    font-size: 0.9em;
+    line-height: 34px;
+    }
+    
     /* Styles for tablets */
     .know-more {
         margin: 10px;
