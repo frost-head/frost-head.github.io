@@ -31,7 +31,7 @@ Body{
     color: #fff;
     font-family: 'Sofia Sans', sans-serif;
     overflow-x: hidden;
-    font-size: 1.37em;
+    font-size: 1.37rem;
     line-height: 40px;
 }
 a{
@@ -246,7 +246,7 @@ section{
     color: #fff;
     font-family: 'Sofia Sans', sans-serif;
     overflow-x: hidden;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     line-height: 34px;
     }
     
