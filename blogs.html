@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Frost Head</title>
+    <link rel="stylesheet" href="./style.css">
+    <meta name="keywords"
+          content="Frost Head, Ayush Sharma, Personal Brand, Deep Learning, AI Innovator, Web Developer, Entrepreneur, Innovations, Technology, Technical Community, Open Source, Leadership, Problem Solver, Creativity, Analytical Thinking, Professionalism, Collaboration, Personal Growth, Lifelong Learning, Passion, Communication, Teamwork, Results-Driven, Technical Excellence, Strategic Thinking, Thought Leadership">
+    <meta name="description"
+          content="Welcome to the world of Frost Head - Ayush Sharma. Discover the multifaceted individual behind the personal brand. With a passion for deep learning, web development, and entrepreneurship, Ayush is an innovative force in the technology industry. Explore his journey, expertise, achievements, and commitment to making a positive impact. Join the Frost Head community and embark on a transformative experience filled with knowledge, inspiration, and cutting-edge innovations.">
+    <link rel="shortcut icon" href="./finallogo.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./finallogo.ico">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="IN">
+    <meta name="geo.placename" content="Mandi, Himachal Pradesh">
+    <meta name="geo.position" content="31.7075;76.9326">
+    <meta name="ICBM" content="31.7075, 76.9326">
+    <meta name="web_author" content="Ayush Sharma - Frost Head">
+    <meta name="owner" content="Ayush Sharma - Frost Head">
+    <meta name="publisher" content="Ayush Sharma - Frost Head">
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+    <meta name="rating" content="general">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="author" content="Ayush Sharma - Frost Head">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="revisit-after" content="7 days">
+    <meta name="format-detection" content="telephone=no">
+  </head>
+
+  <body>
+    <header>
+
+
+      <nav>
+            <h1>
+                <a href="./index.html">
+                    Frost Head</a>
+            </h1>
+            <ul class="nav-links" style="list-style: none;">
+                <li><a href="./KnowMore.html">About Me</a></li>
+                <li><a href="./Expertise.html">Expertise</a></li>
+                <li><a href="https://www.youtube.com/channel/UCJCwFQT3KK4-K_08kIcnhDg" target="_blank">YouTube</a></li>
+                <li><a href="./Projects.html">Projects</a></li>
+                <li><a href="./blogs.html">Blogs</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+
+    <section class="description know-more">
+      <h2>Blogs by Frost Head</h2>
+      <section id="blog-posts">
+        <div id="medium-feed-container">
+          Loading posts...
+        </div>
+      </section>
+      <br>
+      <a href="./index.html" class="know-more-button">
+
+        Head Back
+      </a>
+      <p>or</p>
+    </section>
+
+    <section class="social-media know-more">
+      <h2>Connect with Frost Head</h2>
+      <ul class="nav-links" style="list-style: none;">
+        <li><a href="https://github.com/frost-head" target="_blank">
+            GitHub
+          </a></li>
+          <li><a href="https://in.linkedin.com/in/frost-head" target="_blank">
+              Linked In
+            </a></li>
+            <li><a href="https://instagram.com/frost_head" target="_blank">
+                Instagram
+              </a></li>
+              <li><a href="https://youtube.com/channel/UCJCwFQT3KK4-K_08kIcnhDg" target="_blank">
+                  YouTube
+                </a></li>
+      </ul>
+      <p>Connect with Frost Head on social media to stay updated on the latest innovations, projects, and
+      insights. Follow Ayush Sharma on GitHub, LinkedIn, Instagram, and YouTube to explore the world of
+      technology, AI, and deep learning.</p>
+      <a class="know-more-button" href="mailto:ed.ayuhs@gmail.com">Mail Me</a>
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    // *** IMPORTANT: REPLACE THIS URL WITH YOUR GENERATED RSS2JSON URL ***
+    const MEDIUM_RSS_FEED_URL = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@frost-head';
+    const POST_LIMIT = 5; // How many posts you want to display
+
+    // Function to extract the first image URL from the post content (HTML)
+    function extractImageUrl(content) {
+        // Regex to find the 'src' attribute of the first <img> tag
+        const match = content.match(/<img[^>]+src="([^">]+)"/);
+        // Returns the URL if found, otherwise returns a placeholder or empty string
+        return match && match[1] ? match[1] : ''; 
+    }
+
+    fetch(MEDIUM_RSS_FEED_URL)
+        .then(res => res.json())
+        .then(data => {
+            const container = document.getElementById('medium-feed-container');
+            container.innerHTML = ''; 
+            
+            if (data.status !== 'ok' || !data.items) {
+                container.innerHTML = '<p>Sorry, could not load the blog posts right now.</p>';
+                return;
+            }
+
+            const posts = data.items.slice(0, POST_LIMIT);
+            const postsHtml = posts.map(post => {
+                // 1. Extract the image URL
+                const imageUrl = extractImageUrl(post.content);
+                
+                // 2. Extract and clean up the text excerpt (same as before)
+                const content = new DOMParser().parseFromString(post.content, 'text/html');
+                const firstParagraph = content.querySelector('p:not(:empty)')?.textContent || 'Click to read full article...';
+                
+                const date = new Date(post.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+                // 3. Construct the HTML, including the image
+                return `
+                    <div class="blog-post-card descp">
+                        ${imageUrl ? `<div class="post-image-wrapper"><img src="${imageUrl}" alt="${post.title} thumbnail" class="post-thumbnail"/></div>` : ''}
+                        <div class="blog">
+                        <h3>${post.title}</h3>
+                        <p class="post-date">${date}</p>
+                        <p class="post-excerpt">${firstParagraph}</p>
+                        <a href="${post.link}" target="_blank" rel="noopener noreferrer" class="read-more-link">Read on Medium &rarr;</a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            container.innerHTML = postsHtml;
+        })
+        .catch(error => {
+            console.error('Error fetching Medium feed:', error);
+            document.getElementById('medium-feed-container').innerHTML = '<p>An error occurred while loading posts.</p>';
+        });
+});
+    </script>
+
+
+  </body>
+
+</html>
